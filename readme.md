@@ -138,6 +138,52 @@ The API will be available at http://localhost:7900.
                 ]
             }
         ```
+- GET /blogs?searchQuery=query: Retrieve a list of blog posts containing search query and sorting according to frequency of occurrence (paginated with maximun of 4 posts per page)
+
+    Curl Request(id: set to fit your data):
+        ``` 
+            curl -X GET -H "Content-Type: application/json" -d '{
+                "pageNumber":1,
+                "pageSize":4
+            }'  http://localhost:7900/blogs?searchQuery=2                
+        
+        ```
+    Response:
+        ```
+           {
+                "message": "Blogs successfully retrieved",
+                "data": [
+                    {
+                        "id": "761ea5bf-1b21-4258-92fd-dd5e73370b10",
+                        "userId": "bb3cefa9-bcae-4b1c-b78d-04ecc1a7bc2d",
+                        "title": "My first blog 12322 should be first on search",
+                        "imageUrl": "https://ik.imagekit.io/ub0zwxszt/default-image.jpg?updatedAt=1694113468207",
+                        "text": "How to japa, a comprehensive approach 123",
+                        "createdAt": "2023-09-08T07:56:22.809Z",
+                        "updatedAt": "2023-09-08T07:56:22.809Z"
+                    },
+                    {
+                        "id": "4dc518d0-ce54-4d20-bbd1-42cc8e9082f3",
+                        "userId": "bb3cefa9-bcae-4b1c-b78d-04ecc1a7bc2d",
+                        "title": "My first blog 1234",
+                        "imageUrl": "https://ik.imagekit.io/ub0zwxszt/default-image.jpg?updatedAt=1694113468207",
+                        "text": "How to japa, a comprehensive approach 1233",
+                        "createdAt": "2023-09-08T04:03:06.348Z",
+                        "updatedAt": "2023-09-08T04:07:20.533Z"
+                    },
+                    {
+                        "id": "9805fc1d-09b7-477a-a407-49eb9f9ae193",
+                        "userId": "bb3cefa9-bcae-4b1c-b78d-04ecc1a7bc2d",
+                        "title": "My first blog 2",
+                        "imageUrl": "https://ik.imagekit.io/ub0zwxszt/default-image.jpg?updatedAt=1694113468207",
+                        "text": "How to japa, a comprehensive approach2",
+                        "createdAt": "2023-09-08T02:45:54.995Z",
+                        "updatedAt": "2023-09-08T02:45:54.995Z"
+                    }
+                ]
+            }
+        ```
+
 - GET /blogs/:id: Retrieve a specific blog post by ID.
 
      Curl Request(id: set to fit your data):
@@ -371,6 +417,7 @@ The API will be available at http://localhost:7900.
                 }
             }
         ```
+
 
 ## License
 

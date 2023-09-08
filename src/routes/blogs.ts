@@ -4,7 +4,8 @@ import {
      getBlogByID,
      getAllBlogs,
      updateBlogByID,
-     deleteBlogByID
+     deleteBlogByID,
+     searchBlog
      } from '../controller/blogs.js';
 
 const router = express.Router();

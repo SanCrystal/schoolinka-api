@@ -14,6 +14,7 @@ A simple blog API built with Prisma ORM, Postgresql Node.js, and TypeScript.
   - [Running the API](#running-the-api)
   - [API Endpoints](#api-endpoints)
 - [Contributing](#contributing)
+- [Live URL](#live-url)
 - [License](#license)
 
 ## Introduction
@@ -86,7 +87,11 @@ Start development server (on terminal or bash):
 ```
     npm run dev
 ```
-The API will be available at http://localhost:7900.
+The API will be available at http://localhost:7900. 
+Live URL is available at [Schoolinka Blog API](https://schoolinka-api.onrender.com/)
+
+---
+To test all endpoints live, replace all localhost instances with the url above and make a **CURL** request
 
 ## API Endpoints
 
@@ -462,7 +467,8 @@ The API will be available at http://localhost:7900.
                 }
             }
         ```
-
+## Live URL
+[Schoolinka Blog API](https://schoolinka-api.onrender.com/)
 
 ## License
 

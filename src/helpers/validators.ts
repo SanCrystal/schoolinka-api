@@ -74,6 +74,7 @@ import {
     @IsString({message:"Blog must be a string"})
     @MaxLength(2000,{message:"Blog must be at most 2000 characters"})
     @MinLength(10,{message:"Blog must be at least 2 characters"})
+    @IsOptional()
     text:string;
 
     @IsNotEmpty({message:"Blog text must not be empty"})

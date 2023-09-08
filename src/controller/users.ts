@@ -104,9 +104,6 @@ export const updateUserByID = async(req:Request, res:Response) =>{
         const user = await client.user.findUnique({
             where:{
                 id:req.params.id
-            },
-            include:{
-                blogs:true
             }
         })
 
@@ -117,10 +114,10 @@ export const updateUserByID = async(req:Request, res:Response) =>{
                 id:req.params.id
             },
             data:{
-                blogs:{
-                    disconnect:user.blogs,
-                    connect:req.body.blogs
-                }
+                firstName:req.body.firstName,
+                lastName:req.body.lastName,
+                imageUrl:req.body.imageUrl,
+                userName:req.body.userName
             }
         });
         return res.status(200).json({message:"User was updated successfully",data:userUpdate});

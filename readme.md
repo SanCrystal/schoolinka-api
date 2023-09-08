@@ -282,6 +282,7 @@ The API will be available at http://localhost:7900.
 - DELETE /blogs/:id: Delete a blog post by ID.
 
      Curl Request(id: set to fit your data):
+  
         ``` 
             curl -X DELETE -H "Content-Type: application/json" http://localhost:7900/blogs/4dc518d0-ce54-4d20-bbd1-42cc8e9082f3            
         
@@ -439,6 +440,7 @@ The API will be available at http://localhost:7900.
 - DELETE /users/:id: Delete a user by ID.
 
      Curl Request(id: set to fit your data):
+  
         ``` 
             curl -X DELETE -H "Content-Type: application/json"  http://localhost:7900/users/5111ce17-0a62-4738-86eb-c9c51ab4f43c            
         

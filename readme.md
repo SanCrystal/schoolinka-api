@@ -93,6 +93,16 @@ Live URL is available at [Schoolinka Blog API](https://schoolinka-api.onrender.c
 ---
 To test all endpoints live, replace all localhost instances with the url above and make a **CURL** request
 
+---
+#### Example with live link:
+
+```
+    curl -X GET -H "Content-Type: application/json" -d '{
+                "pageNumber":1,
+                "pageSize":4
+            }' https://schoolinka-api.onrender.com/blogs
+```
+
 ## API Endpoints
 
 - GET /blogs: Retrieve a list of blog posts (paginated with maximun of 4 posts per page).

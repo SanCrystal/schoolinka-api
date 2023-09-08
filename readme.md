@@ -92,14 +92,15 @@ The API will be available at http://localhost:7900.
 
 - GET /blogs: Retrieve a list of blog posts (paginated with maximun of 4 posts per page).
     Curl Request:
-        ``` 
+  
+        ```
             curl -X GET -H "Content-Type: application/json" -d '{
                 "pageNumber":1,
                 "pageSize":4
             }' http://localhost:7900/blogs                 
-        
         ```
     Response:
+  
         ```
             {
                 "message": "Blogs fetched successfully",
@@ -143,9 +144,11 @@ The API will be available at http://localhost:7900.
                 ]
             }
         ```
+  
 - GET /blogs?searchQuery=query: Retrieve a list of blog posts containing search query and sorting according to frequency of occurrence (paginated with maximun of 4 posts per page)
 
     Curl Request(id: set to fit your data):
+  
         ``` 
             curl -X GET -H "Content-Type: application/json" -d '{
                 "pageNumber":1,
@@ -153,7 +156,9 @@ The API will be available at http://localhost:7900.
             }'  http://localhost:7900/blogs?searchQuery=2                
         
         ```
+  
     Response:
+  
         ```
            {
                 "message": "Blogs successfully retrieved",
@@ -192,11 +197,14 @@ The API will be available at http://localhost:7900.
 - GET /blogs/:id: Retrieve a specific blog post by ID.
 
      Curl Request(id: set to fit your data):
+  
         ``` 
             curl -X GET -H "Content-Type: application/json"  http://localhost:7900/blogs/9805fc1d-09b7-477a-a407-49eb9f9ae193                
         
         ```
+  
     Response:
+  
         ```
             {
                 "message": "Blog was fetched successfully",
@@ -211,9 +219,11 @@ The API will be available at http://localhost:7900.
                 }
             }
         ```
+  
 - POST /blogs: Create a new blog post.
 
     Curl Request:
+  
         ``` 
             curl -X POST -H "Content-Type: application/json" -d '{
                 "imageUrl":"https://ik.imagekit.io/ub0zwxszt/default-image.jpg?updatedAt=1694113468207",
@@ -223,7 +233,9 @@ The API will be available at http://localhost:7900.
             }' http://localhost:7900/blogs              
         
         ```
+  
     Response:
+  
         ```
             {
                 "message":"Blog was created successfully",
@@ -237,9 +249,11 @@ The API will be available at http://localhost:7900.
                 }
             }
         ```
+  
 - PATCH /blogs/:id: Update an existing blog post.
 
      Curl Request(id: set to fit your data):
+  
         ``` 
             curl -X PATCH -H "Content-Type: application/json" -d '{
                 "imageUrl":"https://ik.imagekit.io/ub0zwxszt/default-image.jpg?updatedAt=1694113468207",
@@ -248,7 +262,9 @@ The API will be available at http://localhost:7900.
             }' http://localhost:7900/blogs/4dc518d0-ce54-4d20-bbd1-42cc8e9082f3            
         
         ```
+  
     Response:
+  
         ```
             {
                 "message":"Blog was updated successfully",
@@ -262,6 +278,7 @@ The API will be available at http://localhost:7900.
                 }
             }
         ```
+  
 - DELETE /blogs/:id: Delete a blog post by ID.
 
      Curl Request(id: set to fit your data):
@@ -269,7 +286,9 @@ The API will be available at http://localhost:7900.
             curl -X DELETE -H "Content-Type: application/json" http://localhost:7900/blogs/4dc518d0-ce54-4d20-bbd1-42cc8e9082f3            
         
         ```
+  
     Response:
+  
         ```
             {
                 "message":"Blog was deleted successfully",
@@ -283,9 +302,11 @@ The API will be available at http://localhost:7900.
                 }
             }
         ```
+  
 - POST /users: Create a new user.
 
     Curl Request:
+  
         ``` 
             curl -X POST -H "Content-Type: application/json" -d '{
                 "email":"santa12@fmail.com",
@@ -296,7 +317,9 @@ The API will be available at http://localhost:7900.
             }' http://localhost:7900/users              
         
         ```
+  
     Response:
+  
         ```
             {
                 "message":"User was created successfully",
@@ -309,15 +332,19 @@ The API will be available at http://localhost:7900.
                     "createdAt":"2023-09-08T04:14:39.000Z",
                     "updatedAt":"2023-09-08T04:14:39.000Z"}
             }
-        ```    
+        ```
+  
 - GET /users: Retrieve a list of users.
 
     Curl Request:
+  
         ``` 
             curl -X GET -H "Content-Type: application/json" http://localhost:7900/users                 
         
         ```
+  
     Response:
+  
         ```
            {
             "message":"Users fetched successfully",
@@ -351,14 +378,18 @@ The API will be available at http://localhost:7900.
             ]
             }
         ```
+  
 - GET /users/:id: Retrive a specific user.
 
     Curl Request:
+  
         ``` 
             curl -X GET -H "Content-Type: application/json" http://localhost:7900/users/5111ce17-0a62-4738-86eb-c9c51ab4f43c               
         
         ```
+  
     Response:
+  
         ```
           {
                 "message":"User was fetched successfully",
@@ -373,10 +404,12 @@ The API will be available at http://localhost:7900.
                 }
             }
         ```
+  
 - PATCH /users/:id: Update an existing user.
 
 
      Curl Request(id: set to fit your data):
+  
         ``` 
             curl -X PATCH -H "Content-Type: application/json" -d '{
                 "email":"santa1@fmail.com",
@@ -385,7 +418,9 @@ The API will be available at http://localhost:7900.
             }' http://localhost:7900/users/5111ce17-0a62-4738-86eb-c9c51ab4f43c            
         
         ```
+  
     Response:
+  
         ```
            {
                 "message":"User was updated successfully",
@@ -400,6 +435,7 @@ The API will be available at http://localhost:7900.
                 }
             }
         ```
+  
 - DELETE /users/:id: Delete a user by ID.
 
      Curl Request(id: set to fit your data):
@@ -407,7 +443,9 @@ The API will be available at http://localhost:7900.
             curl -X DELETE -H "Content-Type: application/json"  http://localhost:7900/users/5111ce17-0a62-4738-86eb-c9c51ab4f43c            
         
         ```
+  
     Response:
+  
         ```
            {
                 "message":"User was deleted successfully",
